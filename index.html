@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Yus Askia | Portofolio</title>
+    <title>Yus Askia | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Font -->
@@ -11,7 +11,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,17 +26,23 @@
         <li><a href="#skills">Skills</a></li>
     </ul>
 
-    <!-- Dark Mode Button -->
-    <button id="darkToggle" class="dark-btn">
-        <i class="fas fa-moon"></i>
-    </button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Yus Askia</h1>
-    <h3>Computer Science Student</h3>
-    <a href="#about" class="btn">View Profile</a>
+    <div class="hero-content">
+        <h1>Hi, I'm <span>Yus Askia</span></h1>
+        <h3>Computer Science Student | Web & Database Enthusiast</h3>
+        <p>
+            Saya fokus membangun aplikasi web modern dan sistem basis data
+            yang terstruktur, efisien, dan scalable.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#skills" class="btn-outline">My Skills</a>
+        </div>
+    </div>
 </section>
 
 <!-- ABOUT -->
@@ -47,14 +52,13 @@
 
         <div class="about-box">
             <p>
-                Saya adalah mahasiswa Ilmu Komputer yang sedang mempelajari 
-                pengembangan web dan sistem basis data. Saya memiliki 
-                ketertarikan pada pemrograman dan pengolahan data, serta 
-                aktif mengerjakan proyek berbasis database dan web.
+                Saya mahasiswa Ilmu Komputer dengan minat pada pengembangan web
+                dan sistem basis data. Terbiasa membuat desain database menggunakan
+                ERD, melakukan normalisasi data, serta membangun tampilan web
+                yang responsif dan user-friendly.
                 <br><br>
-                Fokus saya saat ini adalah meningkatkan skill di bidang
-                Web Development dan Database System agar dapat berkembang
-                menjadi software developer profesional.
+                Target saya adalah berkembang menjadi Software Developer
+                yang mampu membangun sistem yang scalable dan efisien.
             </p>
         </div>
     </div>
@@ -63,25 +67,31 @@
 <!-- PROJECTS -->
 <section id="projects" class="section">
     <div class="container">
-        <h2>Projects</h2>
+        <h2>Selected Projects</h2>
 
-        <div class="project-box">
-            <h3>Personal Portfolio Website</h3>
-            <p>
-                Website portofolio pribadi yang dibuat menggunakan HTML dan CSS
-                dengan desain modern, responsive, dan mendukung dark mode.
-            </p>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    Website portofolio berbasis HTML & CSS
+                    dengan desain modern, responsive layout,
+                    dan fitur dark mode toggle.
+                </p>
+                <span class="tech">HTML • CSS • GitHub Pages</span>
+            </div>
+
+            <div class="project-card">
+                <h3>Database System Project</h3>
+                <p>
+                    Perancangan sistem basis data menggunakan ERD,
+                    normalisasi hingga implementasi SQL
+                    untuk manajemen data terstruktur.
+                </p>
+                <span class="tech">SQL • ERD • Database Design</span>
+            </div>
+
         </div>
-
-        <div class="project-box">
-            <h3>Database System Project</h3>
-            <p>
-                Proyek sistem basis data yang dirancang menggunakan ERD,
-                normalisasi, dan implementasi SQL untuk mengelola data
-                secara terstruktur dan efisien.
-            </p>
-        </div>
-
     </div>
 </section>
 
@@ -101,13 +111,13 @@
             <div class="skill">
                 <i class="fas fa-database"></i>
                 <p>SQL</p>
-                <div class="bar"><span style="width:31%"></span></div>
+                <div class="bar"><span style="width:35%"></span></div>
             </div>
 
             <div class="skill">
                 <i class="fab fa-html5"></i>
                 <p>HTML</p>
-                <div class="bar"><span style="width:20%"></span></div>
+                <div class="bar"><span style="width:21%"></span></div>
             </div>
 
             <div class="skill">
@@ -119,7 +129,7 @@
             <div class="skill">
                 <i class="fas fa-code"></i>
                 <p>C++</p>
-                <div class="bar"><span style="width:15%"></span></div>
+                <div class="bar"><span style="width:17%"></span></div>
             </div>
 
         </div>
@@ -128,32 +138,20 @@
         <div class="contact">
             <h3>Contact</h3>
             <div class="contact-icons">
-                <a href="mailto:your.yusaskia11@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/askaasky" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/__askyy_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:yusaskia11@gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/askaasky" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/__askyy_/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
 
     </div>
 </section>
-
-<!-- DARK MODE SCRIPT -->
-<script>
-const toggle = document.getElementById("darkToggle");
-const icon = toggle.querySelector("i");
-
-toggle.onclick = () => {
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-    }
-};
-</script>
 
 </body>
 </html>
