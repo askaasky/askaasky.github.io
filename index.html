@@ -5,24 +5,32 @@
     <title>Yus Askia | Portofolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <div class="logo">Yus Askia</div>
+
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
     </ul>
+
+    <!-- Dark Mode Button -->
+    <button id="darkToggle" class="dark-btn">
+        <i class="fas fa-moon"></i>
+    </button>
 </nav>
 
 <!-- HERO -->
@@ -36,12 +44,17 @@
 <section id="about" class="section">
     <div class="container">
         <h2>About Me</h2>
+
         <div class="about-box">
             <p>
                 Saya adalah mahasiswa Ilmu Komputer yang sedang mempelajari 
                 pengembangan web dan sistem basis data. Saya memiliki 
                 ketertarikan pada pemrograman dan pengolahan data, serta 
                 aktif mengerjakan proyek berbasis database dan web.
+                <br><br>
+                Fokus saya saat ini adalah meningkatkan skill di bidang
+                Web Development dan Database System agar dapat berkembang
+                menjadi software developer profesional.
             </p>
         </div>
     </div>
@@ -56,24 +69,23 @@
             <h3>Personal Portfolio Website</h3>
             <p>
                 Website portofolio pribadi yang dibuat menggunakan HTML dan CSS
-                sebagai tugas pengembangan web. Website ini menampilkan profil,
-                skill, dan informasi kontak secara sederhana dan responsif.
+                dengan desain modern, responsive, dan mendukung dark mode.
             </p>
         </div>
 
         <div class="project-box">
             <h3>Database System Project</h3>
             <p>
-                Proyek sistem basis data yang dibuat pada mata kuliah Basis Data.
-                Sistem ini dirancang menggunakan ERD, normalisasi, dan implementasi
-                SQL untuk mengelola data secara terstruktur.
+                Proyek sistem basis data yang dirancang menggunakan ERD,
+                normalisasi, dan implementasi SQL untuk mengelola data
+                secara terstruktur dan efisien.
             </p>
         </div>
 
     </div>
 </section>
 
-<!-- SKILLS + CONTACT -->
+<!-- SKILLS -->
 <section id="skills" class="section">
     <div class="container">
         <h2>Programming Language & Tools</h2>
@@ -112,6 +124,7 @@
 
         </div>
 
+        <!-- CONTACT -->
         <div class="contact">
             <h3>Contact</h3>
             <div class="contact-icons">
@@ -123,6 +136,24 @@
 
     </div>
 </section>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+const toggle = document.getElementById("darkToggle");
+const icon = toggle.querySelector("i");
+
+toggle.onclick = () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+};
+</script>
 
 </body>
 </html>
