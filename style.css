@@ -211,14 +211,17 @@ body.dark .bar {
     font-size: 24px;
 }
 
+/* Tambahan buat media sosial lebih interaktif */
 .contact-icons a {
     color: inherit;
-    transition: 0.3s;
+    transition: 0.3s, transform 0.3s;
+    font-size: 28px; /* sedikit lebih besar */
+    cursor: pointer;
 }
 
 .contact-icons a:hover {
     color: #2563eb;
-    transform: translateY(-4px);
+    transform: scale(1.2) translateY(-4px);
 }
 
 /* ========================= */
